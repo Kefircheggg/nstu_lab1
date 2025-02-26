@@ -12,20 +12,22 @@ bool isPalindrome(string &s) {
     return true;
 }
 
+// это функция чтобы проверять является ли символ буквой
 bool isSymb(char ch) {
     string symbols = "qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNMйцукенгшщзхъфывапролджэёячсмитьбю";
+    // это огромная строка со всеми буквами
     for (int i = 0; i < symbols.size(); i++) {
         if (symbols[i] == ch) {
-            return true;
+            return true;    //если символ - буква, то возвращаем true
         }
     }
-    return false;
+    return false;           //если все прошли, но ничего не нашли, значит false
 }
 
 string delSpecials(string s) {
-    string result = "";
+    string result = "";     //возвращаемая строка, которая будет без спец. символов
     for (int i = 0; i < s.length(); i++) {
-        if (s[i] == ' ' || isSymb(s[i])) {
+        if (s[i] == ' ' || isSymb(s[i])) {      //проверка на букву (функция выше) и пробел
             result += s[i];
         }
     }
