@@ -50,7 +50,11 @@ int main(){
             }
                 break;
             case 2: {
-                //tbd
+                string s = "";
+                cout<<"Введите строку: ";
+                getline(cin, s);
+                string result = delSpecials(s);
+                cout<<result;
             }
                 break;
             case 3:
