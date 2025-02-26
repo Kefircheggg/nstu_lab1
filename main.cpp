@@ -2,6 +2,16 @@
 #include <string>
 using namespace std;
 
+bool isPalindrome(string &s) {
+    int len = s.length();
+    for (int i = 0; i < len / 2; i++) {
+        if (s[i] != s[len - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
 bool isSymb(char ch){
     string symbols = "qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM";
     for (int i = 0; i < symbols.size(); i++) {
