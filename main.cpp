@@ -13,7 +13,7 @@ bool isPalindrome(string &s) {
 }
 
 bool isSymb(char ch){
-    string symbols = "qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM";
+    string symbols = "qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNMйцукенгшщзхъфывапролджэёячсмитьбю";
     for (int i = 0; i < symbols.size(); i++) {
         if (symbols[i] == ch) {
             return true;
@@ -51,10 +51,11 @@ int main(){
                 break;
             case 2: {
                 string s = "";
-                cout<<"Введите строку: ";
+                cout << "Введите строку: ";
+                cin.ignore();  // Добавляем игнорирование символа новой строки
                 getline(cin, s);
                 string result = delSpecials(s);
-                cout<<result;
+                cout << result << endl;
             }
                 break;
             case 3:
