@@ -1,7 +1,3 @@
-//
-// Created by Артем Скороходов on 26.02.2025.
-//
-
 #include <iostream>
 #include <string>
 using namespace std;
@@ -24,12 +20,29 @@ string delSpecials(string s){
         }
     }
     return result;
-}
 
-int main(){
-    string s = "";
-    cout<<"Enter a string: ";
-    getline(cin, s);
-    string result = delSpecials(s);
-    cout<<result;
+int main() {
+    while (true) {
+        cout << "Выберите задачу:" << endl;
+        cout << "1. Является ли строка палиндромом" << endl;
+        cout << "2. Удалить спецсимволы из строки" << endl;
+        cout << "3. Выход" << endl;
+        int choice;
+        cin >> choice;
+        switch (choice) {
+            case 1:
+                cout << "keker" << endl;
+                break;
+            case 2:
+                cout << "loler" << endl;
+                break;
+            case 3:
+                cout << "Пока!" << endl;
+                exit(0);
+            default:
+                cout << "Неизвестная команда" << endl;
+        }
+    }
+
+    return 0;
 }
