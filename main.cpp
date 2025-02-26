@@ -41,11 +41,17 @@ int main(){
         int choice;
         cin >> choice;
         switch (choice) {
-            case 1:
-                cout << "keker" << endl;
+            case 1: {
+                string input;
+                cout << "Введите строку" << endl;
+                cin >> input;
+                string output = (isPalindrome(input) ? "Строка - палиндром" : "Строка - не палиндром");
+                cout << output << endl;
+            }
                 break;
-            case 2:
-                cout << "loler" << endl;
+            case 2: {
+                //tbd
+            }
                 break;
             case 3:
                 cout << "Пока!" << endl;
