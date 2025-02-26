@@ -12,7 +12,7 @@ bool isSymb(char ch){
     return false;
 }
 
-string delSpecials(string s){
+string delSpecials(string s) {
     string result = "";
     for (int i = 0; i < s.length(); i++) {
         if (s[i] == ' ' || isSymb(s[i])) {
@@ -20,8 +20,9 @@ string delSpecials(string s){
         }
     }
     return result;
+}
 
-int main() {
+int main(){
     while (true) {
         cout << "Выберите задачу:" << endl;
         cout << "1. Является ли строка палиндромом" << endl;
