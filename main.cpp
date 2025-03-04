@@ -14,14 +14,14 @@ bool isPalindrome(string &s) {
 
 // это функция чтобы проверять является ли символ буквой
 bool isSymb(char ch) {
-    string symbols = "qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNMйцукенгшщзхъфывапролджэёячсмитьбю";
+    string symbols = "јџќ®†њѓѕў‘“ъƒыћ÷©₽°љ∆…ђ≈≠µи™~≤≥“!№%:,.;()_+-]{}!@#$%^&*";
     // это огромная строка со всеми буквами
     for (int i = 0; i < symbols.size(); i++) {
         if (symbols[i] == ch) {
-            return true;    //если символ - буква, то возвращаем true
+            return false;    //если символ - special, то возвращаем false
         }
     }
-    return false;           //если все прошли, но ничего не нашли, значит false
+    return true;           //если все прошли, но ничего не нашли, значит false
 }
 
 string delSpecials(string s) {
