@@ -8,6 +8,7 @@ bool isPalindrome(string &s) {
         if (s[i] != s[strLen - i - 1]) { //если i-й символ с левого и правого концов не совпадают
             return false; //то строка не является палиндромом:(
         }
+	// asdasd
     }
     return true;
 }
