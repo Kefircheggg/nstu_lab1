@@ -8,6 +8,7 @@ bool isSymb(char ch){
         if (symbols[i] == ch) {
             return true;
         }
+	// asdasd
     }
     return false;
 }
