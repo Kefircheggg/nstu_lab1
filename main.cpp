@@ -48,7 +48,8 @@ int main(){
             case 1: {
                 string input;
                 cout << "Введите строку: ";
-                cin >> input;
+                cin.ignore();
+                getline(cin, input);
                 bool checkResult = isPalindrome(input);
                 string output = checkResult ? "Строка - палиндром" : "Строка - не палиндром"; //ответ через тернарный оператор
                 cout << output << endl;
