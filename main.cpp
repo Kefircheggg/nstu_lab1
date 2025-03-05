@@ -1,11 +1,22 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
 
-bool isPalindrome(string &s) {
-    int strLen = s.length();
-    for (int i = 0; i < strLen / 2; i++) { //прогоняем все индексы до середины строки
-        if (s[i] != s[strLen - i - 1]) { //если i-й символ с левого и правого концов не совпадают
+bool isPalindrome(string s) {
+    string woSpaces;
+
+    transform(s.begin(), s.end(), s.begin(),
+              ::tolower);
+
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] != ' ') {
+            woSpaces += s[i];
+        }
+    }
+
+    for (int i = 0; i < woSpaces.length() / 2; i++) { //прогоняем все индексы до середины строки
+        if (woSpaces[i] != woSpaces[woSpaces.length() - i - 1]) { //если i-й символ с левого и правого концов не совпадают
             return false; //то строка не является палиндромом:(
         }
     }
@@ -48,7 +59,6 @@ int main(){
             case 1: {
                 string input;
                 cout << "Введите строку: ";
-                cin.ignore();
                 getline(cin, input);
                 bool checkResult = isPalindrome(input);
                 string output = checkResult ? "Строка - палиндром" : "Строка - не палиндром"; //ответ через тернарный оператор
